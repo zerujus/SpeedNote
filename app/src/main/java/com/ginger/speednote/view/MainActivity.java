@@ -1,4 +1,4 @@
-package com.ginger.speednote;
+package com.ginger.speednote.view;
 
 import android.os.Bundle;
 
@@ -8,10 +8,9 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.ginger.adapter.MainRecycleAdapter;
-import com.ginger.wight.FontNote;
-
-import butterknife.BindView;
+import com.ginger.speednote.R;
+import com.ginger.speednote.adapter.MainRecycleAdapter;
+import com.ginger.speednote.model.Note;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,10 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView.setHasFixedSize(true);
 
-        FontNote[] notes = new FontNote[3];
-        notes[0] = new FontNote("This is first note", null);
-        notes[1] = new FontNote("This is second note\t it's great", null);
-        notes[2] = new FontNote("This is third note", null);
+        Note[] notes = new Note[3];
 
         adapter = new MainRecycleAdapter(this, notes);
         recyclerView.setAdapter(adapter);

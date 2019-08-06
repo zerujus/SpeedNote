@@ -1,4 +1,4 @@
-package com.ginger.adapter;
+package com.ginger.speednote.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,15 +9,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ginger.speednote.model.Note;
 import com.ginger.speednote.R;
-import com.ginger.wight.FontNote;
 
 public class MainRecycleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private Context context;
-    private FontNote[] notes;
+    private Note[] notes;
 
-    public MainRecycleAdapter(Context context,FontNote[] notes) {
+    public MainRecycleAdapter(Context context,Note[] notes) {
         this.context = context;
         this.notes = notes;
     }
@@ -32,7 +32,7 @@ public class MainRecycleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        ((MainViewHolder) holder).textView.setText(notes[position].getSubstance());
+
     }
 
     @Override
