@@ -15,7 +15,7 @@ import com.ginger.speednote.adapter.MainRecycleAdapter;
 import com.ginger.speednote.model.Note;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements BaseActivity{
 
     private RecyclerView recyclerView;
     private MainRecycleAdapter adapter;
